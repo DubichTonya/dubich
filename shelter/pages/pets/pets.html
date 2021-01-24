@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="pets.min.css">
+  <title>Document</title>
+</head>
+
+<body class="petsPage">
+  <header class="header">
+    <div class="container">
+      <h1 class="visually-hidden">Cozy House</h1>
+      <nav class="header__navigation navigation">
+        <div class="menu-wrapper">
+          <a href="../main/index.html" class="logo">
+            <span class="logo__name">Cozy House</span>
+            <span class="logo__description">Shelter for pets in Boston</span>
+          </a>
+          <button class="menu__btn"><span class="line"></span><span class="visually-hidden">Меню</span></button>
+        </div>
+        <ul class="navigation__list">
+          <li class="navigation__item"><a href="../main/index.html">About the shelter</a></li>
+          <li class="navigation__item"><a href="#!" class="activeLink">Our pets</a></li>
+          <li class="navigation__item"><a href="#!">Help the shelter</a></li>
+          <li class="navigation__item"><a href="#!">Contacts</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="petsPage__content">
+    <div class="container">
+      <h3 class="petsPage__title">
+        Our friends who<br> are looking for a house
+      </h3>
+  
+      <div class="petsPageSlider">
+        <ul class="petsPageSlider__list"></ul>
+          <div class="petsPageSlider__btns">
+            <button class="arrow arrow-left arrow_img" disabled="true">
+              <svg class="arrow_img" width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.94687 10.7852L0.913671 6.08789V4.98438L9.94687 0.287109V1.625L2.43711 5.53125L9.94687 9.44727V10.7852ZM24.018 10.7852L14.9848 6.08789V4.98438L24.018 0.287109V1.625L16.5082 5.53125L24.018 9.44727V10.7852Z" fill="#292929"></path>
+                </svg>
+              <span class="visually-hidden">double left</span>
+            </button>
+            <button class="arrow arrow-left arrow_img" disabled="true">
+              <svg class="arrow_img" width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.98242 10.7852L0.949219 6.08789V4.98438L9.98242 0.287109V1.625L2.47266 5.53125L9.98242 9.44727V10.7852Z" fill="#292929"></path>
+                </svg>
+              <span class="visually-hidden">left</span>
+            </button>
+            <span class="arrow count">1</span>
+            <button class="arrow arrow-right arrow_img">
+              <svg class="arrow_img" width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.98242 10.7852L0.949219 6.08789V4.98438L9.98242 0.287109V1.625L2.47266 5.53125L9.98242 9.44727V10.7852Z" fill="#292929"></path>
+                </svg>
+              <span class="visually-hidden">right</span>
+            </button>
+            <button class="arrow arrow-right arrow_img">
+              <svg class="arrow_img" width="25" height="11" viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.94687 10.7852L0.913671 6.08789V4.98438L9.94687 0.287109V1.625L2.43711 5.53125L9.94687 9.44727V10.7852ZM24.018 10.7852L14.9848 6.08789V4.98438L24.018 0.287109V1.625L16.5082 5.53125L24.018 9.44727V10.7852Z" fill="#292929"></path>
+                </svg>
+              <span class="visually-hidden">double left</span>
+            </button>
+          </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__info">
+        <section class="contacts">
+          <h3 class="contacts__title">For questions <br> and suggestions</h3>
+          <ul class="contacts__list">
+            <li>
+              <a class="contacts__email" href="mailto:email@shelter.com">email@shelter.com</a>
+            </li>
+            <li>
+              <a class="contacts__phone" href="tel:+136745677554">+13 674 567 75 54</a>
+            </li>
+          </ul>
+        </section>
+        <section class="address">
+          <h3 class="address__title">We are waiting <br> for your visit</h3>
+          <address>
+            <a href="https://goo.gl/maps/Mcr33MtX8iaWMYpA6">1 Central Street, Boston <br>(entrance from the store)</a>
+            <a href="https://goo.gl/maps/heKYiqpbisbGSicdA">18 South Park, London </a>
+          </address>
+        </section>
+      </div>
+      <div class="footer__img">
+        <img src="../../assets/images/footer-puppy.png" alt="Funny puppy">
+      </div>
+    </div>
+  </footer>
+
+  <script src="pets.js"></script>
+</body>
+
+</html>

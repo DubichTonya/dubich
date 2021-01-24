@@ -1,0 +1,429 @@
+html {
+  box-sizing: border-box
+}
+
+*,
+:before,
+:after {
+  box-sizing: inherit
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 90px 15px 70px;
+  margin: 0 auto;
+  font-family: 'Quicksand', sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  letter-spacing: .6px;
+  transition: background-image 1s ease-in-out;
+  overflow: hidden
+}
+
+body::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5)
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 70vw;
+  min-height: 80vh;
+  text-align: center;
+  justify-content: center;
+  z-index: 5
+}
+
+h1 {
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 40px;
+  line-height: 60px;
+  text-transform: uppercase
+}
+
+.greetingBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 30px;
+  line-height: 40px
+}
+
+.greeting {
+  margin-bottom: 15px;
+}
+
+h3 {
+  max-width: 100%;
+  min-height: 30px;
+  padding: 10px;
+  margin: 0;
+  margin-bottom: 30px;
+  font-size: 25px;
+  line-height: 35px;
+  opacity: .8;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+span {
+  display: inline-block
+}
+
+.quote {
+  position: relative;
+  width: 80%;
+  margin-top: 15px;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 20px 20px 50px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.6);
+  margin-bottom: 15px;
+}
+
+.quote blockquote {
+  text-align: left
+}
+
+.quote figcaption {
+  text-align: right
+}
+
+.time {
+  font-size: 50px;
+  line-height: 60px
+}
+
+.changeImage {
+  cursor: pointer;
+  position: fixed;
+  left: 30px;
+  top: 30px;
+  width: 60px;
+  height: 60px;
+  border: 0;
+  background: url(https://www.pngarts.com/files/7/Update-Button-PNG-Image.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: grayscale(1);
+  margin: 10px
+}
+
+.changeImage:hover {
+  filter: grayscale(.8)
+}
+
+.changeImage:active,
+.changeImage:focus {
+  outline: 0
+}
+
+.changeImage:active {
+  transform: scale(1.02)
+}
+
+.name:focus,
+.name:red {
+  border: 1px solid red
+}
+
+.focus,
+.name {
+  min-width: 100px;
+  min-height: 40px;
+  overflow: hidden;
+  word-break: break-all;
+  white-space: normal;
+  overflow-y: auto;
+}
+
+.focus {
+  max-height: 120px
+}
+
+.name {
+  max-height: 50px
+}
+
+.quoteBtn {
+  position: absolute;
+  right: auto;
+  left: 5px;
+  bottom: 5px;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  filter: grayscale(.8);
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.quoteBtn:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: 0.8s ease;
+}
+
+.quoteBtn:hover .quoteBtnImg path{
+  fill:black;
+  stroke:white;
+}
+
+.quoteBtn:hover {
+  filter: grayscale(.2)
+}
+
+.quoteBtn:active,
+.quoteBtn:focus {
+  outline: 0
+}
+
+.quoteBtn:active {
+  border: 1px solid #fff;
+  border-radius: 20px
+}
+
+/* weather */
+.weatherBlock {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  width: 300px;
+  margin: 0 auto;
+
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  transition: 0.5s ease;
+  z-index: 5;
+  padding: 10px;
+}
+.weatherBlock.active {
+  top: 0px;
+  transition: 0.5s ease;
+
+}
+.weatherBtn {
+  position: absolute;
+  padding: 0;
+  right: 30px;
+  top: 30px;
+  border: none;
+  background-color: transparent;
+  z-index: 100;
+  outline: none;
+  cursor: pointer;
+}
+
+.weather {
+  fill: rgb(255,255,255);
+}
+.weatherBtn:hover .weather {
+  fill: yellow;
+}
+
+.city {
+  font-weight: bold;
+  display: inline-block;
+}
+.weather-icon {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.allWeather {
+  font-size: 16px;
+  line-height: 24px;
+}
+.temperature {
+  margin-bottom: 10px;
+  font-size: 20px;
+  line-height: 140%;
+}
+
+.windSpeed, .humidity {
+margin-bottom: 10px;
+}
+
+
+.weather-description {
+  text-transform: uppercase;
+}
+
+
+@media (max-width: 920px) {
+  .body {
+    background-size: cover
+  }
+
+  .wrapper {
+    margin: 0 auto;
+    width: 90vw
+  }
+
+  .time {
+    font-size: 40px;
+    line-height: 50px
+  }
+
+  h1 {
+    font-size: 30px;
+    line-height: 50px
+  }
+
+  .greetingBlock {
+    margin-bottom: 40px;
+    font-size: 25px;
+    line-height: 35px
+  }
+
+  h3 {
+    font-size: 20px;
+    line-height: 30px
+  }
+
+  .quote {
+    width: 100%;
+    margin: 0 auto 50px
+  }
+
+  .changeImage {
+    position: fixed;
+    left: 15px;
+    top: 15px
+  }
+
+
+  blockquote {
+    max-height: 150px;
+    margin: 0;
+    overflow-x: auto
+  }
+}
+
+@media (max-width: 560px) {
+  body {
+    padding: 50px 15px 70px;
+    min-height: 100vh;
+    height: 100%;
+    overflow: auto
+  }
+
+  .quote figcaption {
+    line-height: 40px
+  ;}
+
+  .quoteBtn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .quoteBtnImg {
+    width: 30px;
+    height: 30px;
+  }
+  .wrapper {
+    width: 100vw
+  }
+
+  .changeImage {
+    position: fixed;
+    left: 0;
+    top: -5px
+  }
+
+  .time {
+    font-size: 30px;
+    line-height: 40px
+  }
+
+  h1 {
+    font-size: 20px;
+    line-height: 35px;
+    word-break: break-all
+  }
+
+  .greetingBlock {
+    word-break: break-all;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 24px
+  }
+
+  .changeImage {
+    width: 40px;
+    height: 40px
+  }
+
+  h3 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 30px
+  }
+
+  .focus,
+  .name {
+    min-width: 60px;
+    min-height: 30px
+  }
+
+  .quote {
+    padding: 10px 10px 40px 10px;
+    margin: 0;
+  }
+
+  .weatherBtn {
+    padding: 0;
+    top: 5px;
+    right: 5px;
+    width: 50px;
+    height: 50px;
+  }
+  .weather {
+    width: 35px;
+    height: 35px;
+  }
+
+  
+}
+
+
